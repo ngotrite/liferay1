@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!-- <html xmlns="http://www.w3.org/1999/xhtml" -->
+<!-- 	xmlns:f="http://java.sun.com/jsf/core" -->
+<!-- 	xmlns:h="http://java.sun.com/jsf/html" -->
+<!-- 	xmlns:ui="http://java.sun.com/jsf/facelets" -->
+<!-- 	xmlns:p="http://primefaces.org/ui" xmlns:pe="http://primefaces.org/ui" -->
+<!-- 	xmlns:c="http://java.sun.com/jsp/jstl/core"> -->
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<!-- <h:form id="form-test" class="container-fluid"> -->
+	<p:dataTable var="item" value="#{testBean.lstTest}" >
+		<p:column headerText="Id">
+			<h:outputText value="#{item.testId}" />
+		</p:column>
+
+		<p:column headerText="Name">
+			<h:outputText value="#{item.testName}" />
+		</p:column>
+	</p:dataTable>
+<!-- </h:form> -->
+</f:view>
+<!-- </html> -->
+

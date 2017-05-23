@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration">
+<hibernate-configuration>
+	<session-factory>
+		<!-- <property name="hibernate.connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property> -->
+		<!-- <property name="hibernate.hikari.minimumIdle">1</property> -->
+		<!-- <property name="hibernate.hikari.maximumPoolSize">30</property> -->
+		<!-- <property name="hibernate.hikari.idleTimeout">30000</property> -->
+		<!-- <property name="hibernate.hikari.dataSourceClassName">com.mysql.cj.jdbc.MysqlDataSource</property> -->
+		<!-- <property name="hibernate.hikari.dataSource.url">jdbc:mysql://localhost:3306/ocs_0902</property> -->
+		<!-- <property name="hibernate.hikari.dataSource.url">jdbc:mysql://192.168.100.103:3306/ocs_0902</property> -->
+		<!-- <property name="hibernate.hikari.dataSource.user">root</property> -->
+		<!-- <property name="hibernate.hikari.dataSource.password">123456</property> -->
+		<!-- <property name="hibernate.hikari.leakDetectionThreshold">30000</property> -->
+		<!-- <property name="hibernate.connection.release_mode">on_close</property> -->
+		<!-- <property name="hibernate.default_schema">ocs_0902</property> -->
+		<!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+		<!-- <property name="show_sql">true</property> -->
+
+		<!-- <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property> -->
+		<!-- <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ocs_0902</property> -->
+		<!-- <property name="hibernate.connection.username">root</property> -->
+		<!-- <property name="hibernate.connection.password">123456</property> -->
+		<!-- <property name="hibernate.connection.release_mode">on_close</property> -->
+		<!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> -->
+		<!-- <property name="hibernate.default_catalog">ocs_0902</property> -->
+		<!-- <property name="show_sql">true</property> -->
+		<!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+		<!-- <property name="hibernate.current_session_context_class">thread</property> -->
+
+
+		<!-- Database connection settings -->
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.username">lportal</property>
+		<property name="hibernate.connection.password">lportal</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:orcl</property>
+
+		<!-- JDBC connection pool (use the built-in) -->
+		<property name="hibernate.connection.pool_size">1</property>
+
+		<!-- SQL dialect -->
+		<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+
+		<!-- Disable the second-level cache -->
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<!-- Echo all executed SQL to stdout -->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- Drop and re-create the database schema on startup -->
+		<property name="hibernate.hbm2ddl.auto">create</property>
+<!-- 		<property name="hibernate.hbm2ddl.auto">update</property> -->
+		
+		<mapping class="com.base.entity.Test" />
+
+
+	</session-factory>
+</hibernate-configuration>
